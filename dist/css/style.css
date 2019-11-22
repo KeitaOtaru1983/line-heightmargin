@@ -1,0 +1,8 @@
+.top p,
+.bottom p
+{
+    line-height: 1.875;
+
+    margin-top: 26px;
+    margin-bottom: 26px;
+}

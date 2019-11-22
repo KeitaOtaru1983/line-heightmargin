@@ -1,0 +1,6 @@
+@import "./_base.scss";
+@import "./_mixin.scss";
+
+.top p,.bottom p{
+    @include lh-marginremove(16px,30,40px);
+}

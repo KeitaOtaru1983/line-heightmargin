@@ -1,0 +1,18 @@
+
+
+@mixin lh-marginremove($font-size,$va,$base-margin){
+ 
+
+  line-height:strip-unit($va/$font-size);
+  $newmargin : $base-margin - ($font-size * (strip-unit($va/$font-size) - 1));
+  margin-top:$newmargin;
+  margin-bottom:$newmargin;
+}
+
+// line-heightの単位を外す
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
